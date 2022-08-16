@@ -1,0 +1,5 @@
+# prettier ignores these files and folders.
+node_modules
+public
+dist
+out
