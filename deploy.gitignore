@@ -7,4 +7,5 @@ tests
 *.md
 *.json
 *.js
+*.lock
 .env.*

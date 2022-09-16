@@ -11,4 +11,7 @@ done
 # This list will be used during CI/CD steps to determine what gets zipped up and sent to the server.
 cat "${binpath}/../deploy.txt" > "${binpath}/../deployed.txt"
 git ls-files -- "${PARMS[@]}" >> "${binpath}/../deployed.txt"
-composer config vendor-dir >> "${binpath}/../deployed.txt"
+# Store dependencies.
+vendor=$(composer config vendor-dir)
+echo "${vendor}" >> "${binpath}/../deployed.txt"
+ls "${vendor}" -a >> "${binpath}/../deployed.txt"
