@@ -43,6 +43,9 @@ jobs:
 
       - name: List current files
         run: ls -a
+        
+      - name: List vendor folder
+        run: ls vendor -a
 
       - name: Create a list of files to deploy
         run: bin/deploy
