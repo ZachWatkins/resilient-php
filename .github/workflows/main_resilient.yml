@@ -58,7 +58,7 @@ jobs:
 
       - name: Compress the listed files
         run: |
-          cat deployed.txt | zip -@ app.zip
+          zip -r -@ app.zip $(cat deployed.txt) vendor
 
       - name: "Deploy to Azure Web App"
         uses: azure/webapps-deploy@v2
