@@ -27,38 +27,27 @@ jobs:
         with:
           files: "composer.json"
 
-      - name: Get Composer vendor directory
-        run: |
-          composer config vendor-dir --absolute
-          composer config cache-dir --absolute
-
       - name: Setup Composer Dependencies
         uses: "ramsey/composer-install@v2"
         with:
           dependency-versions: "locked"
-          composer-options: "--prefer-dist --optimize-autoloader"
+          composer-options: "--no-dev --prefer-dist --optimize-autoloader"
 
       - name: Install zip
         uses: montudor/action-zip@v1.0.0
 
-      - name: List current files
-        run: ls -a
-        
-      - name: List vendor folder
-        run: ls vendor -a
-
-      - name: Create a list of files to deploy
-        run: bin/deploy
+      - name: Build and zip for deployment
+        run: bin/package
 
       - name: Upload list for records
         uses: actions/upload-artifact@v3
         with:
-          name: filelist
-          path: deployed.txt
-
-      - name: Compress the listed files
-        run: |
-          zip -r -@ app.zip $(cat deployed.txt) vendor
+          name: deployed.log
+          path: |
+            deploy.gitignore
+            deploy.txt
+            deployed.log
+            deployed.txt
 
       - name: "Deploy to Azure Web App"
         uses: azure/webapps-deploy@v2
