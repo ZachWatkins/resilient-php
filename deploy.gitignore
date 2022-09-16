@@ -1,0 +1,10 @@
+*gitignore
+bin
+tests
+.*
+*.txt
+*.yml
+*.md
+*.json
+*.js
+.env.*
