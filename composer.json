@@ -1,5 +1,40 @@
 {
+    "name": "zacharywatkins/resilient-framework-php",
+    "description": "A template repository for resilient PHP applications",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zachary K. Watkins",
+            "email": "3458875+ZachWatkins@users.noreply.github.com",
+            "homepage": "https://github.com/zachwatkins/",
+            "role": "Creator"
+        },
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/zachwatkins/resilient-framework-php/graphs/contributors"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/zachwatkins/resilient-framework-php/issues",
+        "source": "https://github.com/zachwatkins/resilient-framework-php/",
+        "docs": "https://raw.githubusercontent.com/zachwatkins/resilient-framework-php/main/README.md"
+    },
+    "require": {
+        "php": ">=8.1",
+        "ext-intl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*"
+    },
     "require-dev": {
-        "laravel/pint": "^1.1"
+        "phpunit/phpunit": "^9.5"
+    },
+    "extra": {
+        "namespace": "App"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
     }
 }

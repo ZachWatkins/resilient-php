@@ -1,5 +1,7 @@
-lib
-node_modules
-vendor
+/node_modules
+/vendor
 public/assets/*.js
 deployed.txt
+.env
+.phpunit.result.cache
+*.log
