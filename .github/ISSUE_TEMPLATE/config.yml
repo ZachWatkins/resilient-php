@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support Question
+    url: https://github.com/zachwatkins/resilient-php/issues
+    about: We use GitHub issues only to discuss bugs, documentation, and new features. I am unable to offer assistance with implementation at this time.
+  - name: Documentation Issue
+    url: https://github.com/zachwatkins/resilient-php/issues
+    about: We use GitHub issues to discuss documentation - you may open an issue at the link provided.
